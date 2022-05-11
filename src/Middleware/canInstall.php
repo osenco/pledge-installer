@@ -1,13 +1,13 @@
 <?php
 
-namespace Pledge\Installer\Middleware;
+namespace Pledge\Install\Middleware;
 
 use Closure;
 use DB;
 
 /**
  * Class canInstall
- * @package Pledge\Installer\Middleware
+ * @package Pledge\Install\Middleware
  */
 
 class canInstall

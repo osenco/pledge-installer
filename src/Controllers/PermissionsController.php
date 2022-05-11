@@ -1,10 +1,10 @@
 <?php
 
-namespace Pledge\Installer\Controllers;
+namespace Pledge\Install\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Routing\Controller;
-use Pledge\Installer\Helpers\PermissionsChecker;
+use Pledge\Install\Helpers\PermissionsChecker;
 
 class PermissionsController extends Controller
 {
@@ -30,9 +30,9 @@ class PermissionsController extends Controller
     public function permissions()
     {
         $permissions = $this->permissions->check(
-            config('installer.permissions')
+            config('install.permissions')
         );
 
-        return view('vendor.installer.permissions', compact('permissions'));
+        return view('vendor.install.permissions', compact('permissions'));
     }
 }

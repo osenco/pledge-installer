@@ -1,9 +1,9 @@
 <?php
 
-namespace Pledge\Installer\Controllers;
+namespace Pledge\Install\Controllers;
 
 use Illuminate\Routing\Controller;
-use Pledge\Installer\Helpers\RequirementsChecker;
+use Pledge\Install\Helpers\RequirementsChecker;
 
 class RequirementsController extends Controller
 {
@@ -29,13 +29,13 @@ class RequirementsController extends Controller
     public function requirements()
     {
         $phpSupportInfo = $this->requirements->checkPHPversion(
-            config('installer.core.minPhpVersion')
+            config('install.core.minPhpVersion')
         );
 
         $requirements = $this->requirements->check(
-            config('installer.requirements')
+            config('install.requirements')
         );
 
-        return view('vendor.installer.requirements', compact('requirements', 'phpSupportInfo'));
+        return view('vendor.install.requirements', compact('requirements', 'phpSupportInfo'));
     }
 }

@@ -24,7 +24,7 @@ After updating composer, add the ServiceProvider to the providers array in `conf
 
 ```bash
 'providers' => [
-    Pledge\Installer\Providers\InstallerServiceProvider::class,
+    Pledge\Install\Providers\InstallServiceProvider::class,
 ];
 ```
 
@@ -33,7 +33,7 @@ After updating composer, add the ServiceProvider to the providers array in `conf
 Before using this package you need to run :
 
 ```bash
-php artisan vendor:publish --provider="Pledge\Installer\Providers\InstallerServiceProvider"
+php artisan vendor:publish --provider="Pledge\Install\Providers\InstallServiceProvider"
 ```
 
 You will notice additional files and folders appear in your project :
@@ -46,11 +46,3 @@ You will notice additional files and folders appear in your project :
 ## Installing your application
 
 - **Install:** In order to install your application, go to the `/install` url and follow the instructions.
-
-## Screenshots
-
-![Laravel web installer](http://public.froid.works/knap1.png)
-
-## Credits
-
-[RachidLaasri Installer](https://github.com/RachidLaasri/install)

@@ -7,7 +7,7 @@ return [
      * Shared translations.
      *
      */
-    'title' => 'Laravel Installer',
+    'title' => 'Laravel Install',
     'next' => 'Next Step',
     'finish' => 'Install',
 
@@ -18,7 +18,7 @@ return [
      *
      */
     'welcome' => [
-        'title'   => 'Welcome To The Installer',
+        'title'   => 'Welcome To The Install',
         'message' => 'Welcome to the setup wizard.',
     ],
 

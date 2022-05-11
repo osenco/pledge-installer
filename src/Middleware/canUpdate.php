@@ -1,10 +1,10 @@
 <?php
 
-    namespace Pledge\Installer\Middleware;
+    namespace Pledge\Install\Middleware;
 
     use Closure;
-    use Pledge\Installer\Helpers\MigrationsHelper;
-    use Pledge\Installer\Middleware\canInstall;
+    use Pledge\Install\Helpers\MigrationsHelper;
+    use Pledge\Install\Middleware\canInstall;
 
     class canUpdate
     {
@@ -23,9 +23,9 @@
             $canInstall = new canInstall;
 
             // if the application has not been installed,
-            // redirect to the installer
+            // redirect to the install
             if (!$canInstall->alreadyInstalled()) {
-                return redirect()->route('Installer::welcome');
+                return redirect()->route('Install::welcome');
             }
 
             if($this->alreadyUpdated()) {

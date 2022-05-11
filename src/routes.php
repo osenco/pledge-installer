@@ -1,40 +1,39 @@
 <?php
-    include 'functions.php';
-Route::group(['prefix' => 'install', 'as' => 'Installer::', 'namespace' => 'Pledge\Installer\Controllers', 'middleware' => ['web', 'install']], function()
-{
+include 'functions.php';
+Route::group(['prefix' => 'install', 'as' => 'Install::', 'namespace' => 'Pledge\Install\Controllers', 'middleware' => ['web', 'install']], function () {
     Route::get('/', [
-            'as' => 'welcome',
-            'uses' => 'WelcomeController@welcome'
-        ]);
+        'as'   => 'welcome',
+        'uses' => 'WelcomeController@welcome',
+    ]);
 
-        Route::get('environment', [
-            'as' => 'environment',
-            'uses' => 'EnvironmentController@environment'
-        ]);
+    Route::get('environment', [
+        'as'   => 'environment',
+        'uses' => 'EnvironmentController@environment',
+    ]);
 
-        Route::get('environment/save', [
-            'as' => 'environmentSave',
-            'uses' => 'EnvironmentController@save'
-        ]);
+    Route::get('environment/save', [
+        'as'   => 'environmentSave',
+        'uses' => 'EnvironmentController@save',
+    ]);
 
-        Route::get('requirements', [
-            'as' => 'requirements',
-            'uses' => 'RequirementsController@requirements'
-        ]);
+    Route::get('requirements', [
+        'as'   => 'requirements',
+        'uses' => 'RequirementsController@requirements',
+    ]);
 
-        Route::get('permissions', [
-            'as' => 'permissions',
-            'uses' => 'PermissionsController@permissions'
-        ]);
+    Route::get('permissions', [
+        'as'   => 'permissions',
+        'uses' => 'PermissionsController@permissions',
+    ]);
 
-        Route::get('database', [
-            'as' => 'database',
-            'uses' => 'DatabaseController@database'
-        ]);
+    Route::get('database', [
+        'as'   => 'database',
+        'uses' => 'DatabaseController@database',
+    ]);
 
-        Route::get('final', [
-            'as' => 'final',
-            'uses' => 'FinalController@finish'
-        ]);
+    Route::get('final', [
+        'as'   => 'final',
+        'uses' => 'FinalController@finish',
+    ]);
 
 });

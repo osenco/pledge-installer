@@ -1,9 +1,9 @@
-@extends('vendor.installer.layouts.master')
+@extends('vendor.install.layouts.master')
 
-@section('title', trans('installer_messages.welcome.title'))
+@section('title', trans('install_messages.welcome.title'))
 @section('container')
-    <p class="paragraph" style="text-align: center;">{{ trans('installer_messages.welcome.message') }}</p>
-    <div class="buttons">
-        <a href="{{ route('Installer::environment') }}" class="button">{{ trans('installer_messages.next') }}</a>
-    </div>
+<p class="paragraph" style="text-align: center;">{{ trans('install_messages.welcome.message') }}</p>
+<div class="buttons">
+    <a href="{{ route('Install::environment') }}" class="button">{{ trans('install_messages.next') }}</a>
+</div>
 @stop

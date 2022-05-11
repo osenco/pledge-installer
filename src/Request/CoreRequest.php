@@ -1,17 +1,16 @@
 <?php
 
-    namespace Pledge\Installer\Request;
+namespace Pledge\Install\Request;
 
-use Pledge\Installer\Helpers\Reply;
 use Illuminate\Foundation\Http\FormRequest;
-
+use Pledge\Install\Helpers\Reply;
 
 class CoreRequest extends FormRequest
 {
 
-    protected function formatErrors(\Illuminate\Contracts\Validation\Validator $validator)
-    {
-        return Reply::formErrors($validator);
-    }
+ protected function formatErrors(\Illuminate\Contracts\Validation\Validator$validator)
+ {
+  return Reply::formErrors($validator);
+ }
 
 }

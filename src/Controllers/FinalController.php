@@ -1,9 +1,9 @@
 <?php
 
-namespace Pledge\Installer\Controllers;
+namespace Pledge\Install\Controllers;
 
 use Illuminate\Routing\Controller;
-use Pledge\Installer\Helpers\InstalledFileManager;
+use Pledge\Install\Helpers\InstalledFileManager;
 
 class FinalController extends Controller
 {
@@ -17,6 +17,6 @@ class FinalController extends Controller
     {
         $fileManager->update();
 
-        return view('vendor.installer.finished');
+        return view('vendor.install.finished');
     }
 }

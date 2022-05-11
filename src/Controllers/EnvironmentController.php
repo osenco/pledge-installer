@@ -1,14 +1,14 @@
 <?php
 
-namespace Pledge\Installer\Controllers;
+namespace Pledge\Install\Controllers;
 
 use Illuminate\Routing\Controller;
-use Pledge\Installer\Helpers\EnvironmentManager;
-use Pledge\Installer\Request\UpdateRequest;
+use Pledge\Install\Helpers\EnvironmentManager;
+use Pledge\Install\Request\UpdateRequest;
 
 /**
  * Class EnvironmentController
- * @package Pledge\Installer\Controllers
+ * @package Pledge\Install\Controllers
  */
 class EnvironmentController extends Controller
 {
@@ -35,7 +35,7 @@ class EnvironmentController extends Controller
     {
         $envConfig = $this->environmentManager->getEnvContent();
 
-        return view('vendor.installer.environment', compact('envConfig'));
+        return view('vendor.install.environment', compact('envConfig'));
     }
 
     /**
