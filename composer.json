@@ -1,0 +1,22 @@
+{
+  "name": "osenco/pledge-installer",
+  "description": "Laravel web installer",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Osen Concepts",
+      "email": "ajay@pledge.com"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Pledge\\Installer\\": "src/"
+    },
+    "files": [
+      "src/functions.php"
+    ]
+  },
+  "minimum-stability": "dev"
+}
